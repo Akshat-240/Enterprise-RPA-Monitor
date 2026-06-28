@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise RPA Telemetry - Control Center</title>
+  
+  <!-- SEO & Optimization -->
+  <meta name="description" content="High-Density Enterprise Robotic Process Automation (RPA) live telemetry monitor dashboard built with custom virtualization layout recycling and compound sorting.">
+  
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="intro-mode">
+
+  <!-- Floating animated grid matrix background -->
+  <div class="background-grid"></div>
+
+  <!-- --- FEATURE 3D SHOWCASE EXPLOSION INTRO OVERLAY --- -->
+  <div class="intro-overlay" id="intro-showcase-overlay">
+    <div class="intro-3d-scene">
+      <div class="telemetry-core-3d">
+        <div class="core-layer core-layer-1">
+          <div class="core-layer core-layer-2">
+            <div class="core-layer core-layer-3">
+              <div class="core-center-node"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="intro-info">
+      <h1 class="intro-title">INTELLIGENT TELEMETRY TERMINAL</h1>
+      <p class="intro-subtitle">DEPLOYMENT: HIGH-DENSITY ENTERPRISE RPA MONITOR</p>
+      <button class="btn-engage-system" id="btn-engage-system">ENGAGE CONTROL TERMINAL</button>
+    </div>
+  </div>
+
+  <!-- --- MAIN DASHBOARD WRAPPER --- -->
+  <main class="dashboard-wrapper">
+    
+    <div class="dashboard-container">
+      
+      <!-- Top Row: High-Density KPIs Dashboard (Feature 1) -->
+      <header class="scatter-panel-kpi terminal-panel kpi-strip" id="kpi-container">
+        <!-- Dynamic KPIs rendered here by features/feature1.js -->
+      </header>
+
+      <!-- Left Column: Sidebar Controls -->
+      <aside class="scatter-panel-sidebar terminal-panel" id="panel-sidebar">
+        <div class="sidebar-panel-content">
+          
+          <!-- System Streaming Controls (Feature 5) -->
+          <div class="control-section">
+            <h4 class="control-section-title">Telemetry Stream Engine</h4>
+            <div class="stream-controls-group">
+              <button class="btn-ctrl btn-primary-telemetry" id="btn-toggle-stream">
+                <span class="icon">⏸</span> PAUSE STREAM
+              </button>
+              <button class="btn-ctrl" id="btn-export-csv" style="background: rgba(16, 185, 129, 0.1); border: 1px solid var(--emerald-neon); color: var(--emerald-neon); margin-top: 8px;">
+                <span class="icon">📥</span> SNAPSHOT EXPORT
+              </button>
+            </div>
+          </div>
+
+          <!-- Fuzzy Search Engine Input (Feature 10) -->
+          <div class="control-section">
+            <h4 class="control-section-title">Fuzzy Search Engine</h4>
+            <div class="search-wrapper">
+              <input type="text" 
+                     id="search-query-input" 
+                     class="search-input" 
+                     placeholder="Type keywords (e.g. Tata Vietnam)..." 
+                     autocomplete="off" />
+            </div>
+          </div>
+
+          <!-- Operator Workspace Layout Persistence Switches (Feature 6) -->
+          <div class="control-section">
+            <h4 class="control-section-title">Layout Settings Toggles</h4>
+            <div class="layout-toggle-list">
+              <div class="layout-toggle-item">
+                <span class="layout-toggle-label">Grid Viewport</span>
+                <button class="btn-layout-toggle" id="toggle-panel-grid" aria-label="Toggle grid viewport"></button>
+              </div>
+              <div class="layout-toggle-item">
+                <span class="layout-toggle-label">Department Charts</span>
+                <button class="btn-layout-toggle" id="toggle-panel-analytics" aria-label="Toggle analytics window"></button>
+              </div>
+              <div class="layout-toggle-item">
+                <span class="layout-toggle-label">Pipeline Overview</span>
+                <button class="btn-layout-toggle" id="toggle-panel-infra" aria-label="Toggle pipeline summary"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infrastructure status HUD (Feature 6 display container) -->
+          <div class="control-section" id="panel-infra-window">
+            <h4 class="control-section-title">Pipeline Summary</h4>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #64748b; line-height: 1.6;">
+              <div>SCHEMA VERSION: <span style="color: var(--cyan-neon);">2.0.26-LVE</span></div>
+              <div>TICK FREQUENCY: <span style="color: var(--cyan-neon);">200ms</span></div>
+              <div>VIRTUALIZATION: <span style="color: var(--emerald-neon);">60 FPS ACTV</span></div>
+              <div>SYSTEM CLUSTER: <span style="color: var(--cyan-neon);">GLOBAL AWS-C8</span></div>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- Right Column: Filters and Grid View -->
+      <section class="dashboard-right-group" style="display: flex; flex-direction: column; gap: 20px; min-width: 0;">
+        
+        <!-- Categorical Multi-Choice Dropdown Filters (Feature 7) -->
+        <div class="scatter-panel-filters terminal-panel" id="filters-container">
+          <!-- Rendered dynamically by features/feature7.js -->
+        </div>
+
+        <!-- Row and filter count display (Feature 7 stats) -->
+        <div id="filter-stats-display" style="font-family: var(--font-display); font-size: 0.8rem; color: #64748b; margin-top: -10px; margin-bottom: 10px; padding-left: 6px;"></div>
+
+        <!-- Custom Virtualized DOM Grid (Feature 8) -->
+        <div class="scatter-panel-grid terminal-panel grid-window" id="panel-grid-window">
+          
+          <div class="terminal-header" style="border: none; padding: 14px 20px 0 20px; margin-bottom: 0;">
+            <div class="terminal-title-group" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span class="terminal-title-icon">📊</span>
+                <h2 class="terminal-title">REAL-TIME FIELD TELEMETRY FEED</h2>
+              </div>
+              <div id="sort-breadcrumbs-container" style="display: flex; align-items: center; gap: 6px; margin-top: 4px;"></div>
+            </div>
+            
+            <!-- Stream status overlays (Feature 5 display) -->
+            <div id="stream-status-overlay" class="status-overlay status-live">
+              <span class="blip blink-green"></span>
+              <span class="status-text">SYSTEM ONLINE (LIVE FEED)</span>
+            </div>
+          </div>
+
+          <!-- Viewport with virtualization container -->
+          <div class="grid-viewport-container" id="grid-viewport">
+            <!-- Rendered dynamically by features/feature8.js -->
+          </div>
+
+        </div>
+
+        <!-- Dynamic Department Analytics Chart panel (Feature 6 toggled chart) -->
+        <div class="scatter-panel-sidebar terminal-panel" id="panel-analytics-window">
+          <div class="terminal-header">
+            <div class="terminal-title-group">
+              <span class="terminal-title-icon">📈</span>
+              <h2 class="terminal-title">ROBOT DEPLOYMENTS BY DEPARTMENT</h2>
+            </div>
+          </div>
+          <div id="analytics-chart-container" style="min-height: 120px; display: flex; align-items: center; justify-content: center;">
+            <!-- Rendered dynamically via SVG aggregations -->
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Inject the official hackathon pipeline simulation script -->
+  <script src="./dataStream.js"></script>
+
+  <!-- Inject the main controller script using ESM -->
+  <script type="module" src="./app.js"></script>
+
+  <!-- Isolated detailed telemetry row inspector modal dialog -->
+  <dialog id="telemetry-row-inspector" closedby="any" aria-labelledby="inspector-dialog-title"></dialog>
+
+</body>
+</html>
